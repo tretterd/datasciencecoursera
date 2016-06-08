@@ -34,6 +34,7 @@ There are a number of generic functions that work on dates and times
 * months: give the month name
 * quarters: give the quarter number (“Q1”, “Q2”, “Q3”, or “Q4”)
 
+
     > x <- Sys.time()
     > x
     > [1] "2013-01-24 22:04:14 EST"
@@ -45,10 +46,12 @@ There are a number of generic functions that work on dates and times
     > [1] 14.34
 
 Finally, there is the strptime function in case your dates are written in a different format
-    >datestring <- c("January 10, 2012 10:40", "December 9, 2011 9:10")
-    >x <- strptime(datestring, "%B %d, %Y %H:%M")
-    >x
-    >[1] "2012-01-10 10:40:00 EST" "2011-12-09 09:10:00 EST"
+
+    > datestring <- c("January 10, 2012 10:40", "December 9, 2011 9:10")
+    > x <- strptime(datestring, "%B %d, %Y %H:%M")
+    > x
+    > [1] "2012-01-10 10:40:00 EST" "2011-12-09 09:10:00 EST"
+    
 Check ?strptime for details
 
 You can use mathematical operations on dates and times (+ and -), comparisons(i.e. ==, <=).
