@@ -35,15 +35,17 @@ There are a number of generic functions that work on dates and times
 * quarters: give the quarter number (“Q1”, “Q2”, “Q3”, or “Q4”)
 
 
-    > x <- Sys.time()
-    > x
-    > [1] "2013-01-24 22:04:14 EST"
-    > p <- as.POSIXlt(x)
-    > names(unclass(p))
-    > [1] "sec" "min" "hour" "mday" "mon"
-    > [6] "year" "wday" "yday" "isdst"
-    > p$sec
-    > [1] 14.34
+
+    >x <- Sys.time()
+    >x
+    >[1] "2013-01-24 22:04:14 EST"
+    >p <- as.POSIXlt(x)
+    >names(unclass(p))
+    >[1] "sec" "min" "hour" "mday" "mon"
+    >[6] "year" "wday" "yday" "isdst"
+    >p$sec
+    >[1] 14.34
+
 
 Finally, there is the strptime function in case your dates are written in a different format
 
