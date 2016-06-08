@@ -29,11 +29,11 @@ You can mix positional matching with matching by name. When an argument is match
 There are a number of generic functions that work on dates and times
 *POSIXct* is just a very large integer under the hood; it use a useful class when you want to store times in something like a data frame
 *POSIXlt* is a list underneath and it stores a bunch of other useful information like the day of the week, day of the year, month, day of the month.
-
 * weekdays: give the day of the week
 * months: give the month name
 * quarters: give the quarter number (“Q1”, “Q2”, “Q3”, or “Q4”)
-.
+
+
 
     >x <- Sys.time()
     >x
