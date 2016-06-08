@@ -54,7 +54,7 @@ Finally, there is the strptime function in case your dates are written in a diff
     > x
     > [1] "2012-01-10 10:40:00 EST" "2011-12-09 09:10:00 EST"
     
-Check ?strptime for details
+Check **?strptime** for details
 
 You can use mathematical operations on dates and times (+ and -), comparisons(i.e. ==, <=).
 
