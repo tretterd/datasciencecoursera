@@ -32,6 +32,8 @@ There are a number of generic functions that work on dates and times
 * weekdays: give the day of the week
 * quarters: give the quarter number (“Q1”, “Q2”, “Q3”, or “Q4”)
 * months: give the month name
+  
+example:
 
 
     >x <- Sys.time()
