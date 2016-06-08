@@ -36,28 +36,28 @@ There are a number of generic functions that work on dates and times
 
     > x <- Sys.time()
     > x
-    > ## [1] "2013-01-24 22:04:14 EST"
+    > [1] "2013-01-24 22:04:14 EST"
     > p <- as.POSIXlt(x)
     > names(unclass(p))
-    > ## [1] "sec" "min" "hour" "mday" "mon"
-    > ## [6] "year" "wday" "yday" "isdst"
+    > [1] "sec" "min" "hour" "mday" "mon"
+    > [6] "year" "wday" "yday" "isdst"
     > p$sec
-    > ## [1] 14.34
+    > [1] 14.34
 
 Finally, there is the strptime function in case your dates are written in a different format
     >datestring <- c("January 10, 2012 10:40", "December 9, 2011 9:10")
     >x <- strptime(datestring, "%B %d, %Y %H:%M")
     >x
-    >## [1] "2012-01-10 10:40:00 EST" "2011-12-09 09:10:00 EST"
+    >[1] "2012-01-10 10:40:00 EST" "2011-12-09 09:10:00 EST"
 Check ?strptime for details
 
 You can use mathematical operations on dates and times (+ and -), comparisons(i.e. ==, <=).
 
     >x <- as.Date("2012-03-01") y <- as.Date("2012-02-28")
     >x-y
-    >## Time difference of 2 days
+    >Time difference of 2 days
     >x <- as.POSIXct("2012-10-25 01:00:00")
     >y <- as.POSIXct("2012-10-25 06:00:00", tz = "GMT")
     >y-x
-    >## Time difference of 1 hours
+    >Time difference of 1 hours
     
