@@ -111,6 +111,7 @@ Factors are used to represent categorical data. Factors can be unordered or orde
 * Using factors with labels is better than using integers because factors are self-describing;
 
 
+
     > > x <- factor(c("yes", "yes", "no", "yes", "no"))
     >> x
     >[1] yes yes no yes no
