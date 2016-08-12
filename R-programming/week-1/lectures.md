@@ -106,3 +106,81 @@ Lists are a special type of vector that can contain elements of different classe
     
 ## Factors
 
+Factors are used to represent categorical data. Factors can be unordered or ordered. One can think of a factor as an integer vector where each integer has a label.
+* Factors are treated specially by modelling functions like  **lm()** and  **glm()**
+* Using factors with labels is better than using integers because factors are self-describing;
+
+
+    > > x <- factor(c("yes", "yes", "no", "yes", "no"))
+    >> x
+    >[1] yes yes no yes no
+    >Levels: no yes
+    >> table(x)
+    >x
+    >no yes
+    >2 3
+    >> unclass(x)
+    >[1] 2 2 1 2 1
+    ?attr(,"levels")
+    >[1] "no" "yes"
+    
+The order of the levels can be set using the  levels argument to  factor() . This can be important
+in linear modelling because the first level is used as the baseline level.
+
+    >> x <- factor(c("yes", "yes", "no", "yes", "no"),
+    >levels = c("yes", "no"))
+    >> x
+    >[1] yes yes no yes no
+    >Levels: yes no
+    
+
+## Missing values
+
+* Missing values are denoted by  NA or  NaN for undefined mathematical operations.
+*is.na()* is used to test objects if they are  NA
+*is.nan()* is used to test for  NaN
+* NA values have a class also, so there are integer  NA , character  NA , etc.
+* A  NaN value is also  NA but the converse is not true
+
+
+## Data Frames
+
+* Data frames are used to store tabular data. They are represented as a special type of list where every element of the list has to have the same length. Each element of the list can be thought of as a column and the length of each element of the list is the number of rows
+* Unlike matrices, data frames can store different classes of objects in each column (just like lists);
+* Data frames also have a special attribute called  *row.names*
+* Data frames are usually created by calling  *read.table()* or  *read.csv()*
+* Can be converted to a matrix by calling  *data.matrix()*
+
+
+## Names
+
+R objects can also have names, which is very useful for writing readable code and self-describing
+objects.
+
+    >> x <- 1:3
+    >> names(x)
+    >NULL
+    >> names(x) <- c("foo", "bar", "norf")
+    >> x
+    >foo bar norf
+    >1 2 3
+    >> names(x)
+    >[1] "foo" "bar" "norf"
+    
+Lists and matrices can also have names.
+
+    >> x <- list(a = 1, b = 2, c = 3)
+    >> x
+    >$a
+    >[1] 1
+    >$b
+    >[1] 2
+    >$c
+    >[1] 3
+    >
+    >> m <- matrix(1:4, nrow = 2, ncol = 2)
+    >> dimnames(m) <- list(c("a", "b"), c("c", "d"))
+    >> m
+    >c d
+    >a 1 3
+    >b 2 4
