@@ -108,8 +108,7 @@ Lists are a special type of vector that can contain elements of different classe
 
 Factors are used to represent categorical data. Factors can be unordered or ordered. One can think of a factor as an integer vector where each integer has a label.
 * Factors are treated specially by modelling functions like  **lm()** and  **glm()**
-* Using factors with labels is better than using integers because factors are self-describing;
-
+* Using factors with labels is better than using integers because factors are self-describing.
 
 
     > > x <- factor(c("yes", "yes", "no", "yes", "no"))
